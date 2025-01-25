@@ -154,9 +154,10 @@ export default function Home() {
             alignItems: 'center',
             pt: { xs: 1, sm: 5 },
             pb: { xs: 8, sm: 10 },
-            bgcolor: '#1976d2',
             borderRadius: 'calc(8px + 8px)',
-            boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px'
+            boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px',
+            backgroundImage:
+                    'linear-gradient(0deg, rgba(25, 118, 210, 0.7) 0%, rgba(25, 118, 210, 0.9) 10%,rgba(25,118,210,1) 100%)',
           }}>
           <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
