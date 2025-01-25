@@ -143,7 +143,7 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'center',
             pt: { xs: 14, sm: 20 },
-            pb: { xs: 1, sm: 1 },
+            pb: { xs: 1, sm: 3 },
           }}>
           <EmblaCarousel slides={testimonialsSlide} options={OPTIONS} />
         </Container>

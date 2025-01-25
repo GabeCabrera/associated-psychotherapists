@@ -25,8 +25,8 @@ const Hero: React.FC<HeroProps> = ({ children }) => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    pt: { xs: 14, sm: 30 },
-                    pb: { xs: 8, sm: 12 },
+                    pt: { xs: 14, sm: 25 },
+                    pb: { xs: 8, sm: 10 },
                 }}
             >
                 {children}
