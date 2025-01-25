@@ -6,11 +6,11 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import { Avatar, Typography } from '@mui/material'
+import { Avatar, Rating, Typography } from '@mui/material'
 
 type PropType = {
 
-  slides: { key: number; title: string; description: string; avatar: string;}[]
+  slides: { key: number; title: string; description: string; avatar: string, rating: number;}[]
 
   options?: EmblaOptionsType
 
@@ -42,6 +42,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary" className='embla-slide-description'>
                     <Avatar className='embla-avatar' sx={{ bgcolor: slide.avatar }}>{slide.description.charAt(0)}</Avatar>&nbsp;{slide.description}
+                    <Rating name="read-only" value={slide.rating} precision={0.5} readOnly sx={{ px: 1 }} />
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
                   </Typography>

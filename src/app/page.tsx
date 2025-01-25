@@ -58,19 +58,24 @@ const testimonialsData = [
     id: 1,
     title: 'I have been going to therapy with Jason Williams for several years now. Mr. Williams has been very open minded, honest, kind and patient in working with me, even when I was at my very worst.',
     description: 'Karlie Marsh',
-    avatar: '#1976d2'
+    avatar: '#1976d2',
+    rating: 5
   },
   {
     id: 2,
     title: 'I have been to three different psychologists over the past five years, and Dr. Christensen is by far the best doctor I have ever had. He is an A+ doctor! I would reccomend him to anyone.',
     description: 'Elisabeth Campbell',
-    avatar: '#1976d2'
+    avatar: '#1976d2',
+    rating: 5
+
   },
   {
     id: 3,
     title: 'Love Christie Powell, she helped me so much with my anxiety and depression throughout and after my pregnancy. She is very knowledgeable and understanding. She has great techniques for coping and resources.',
     description: 'Caitlyn Harper',
-    avatar: '#1976d2'
+    avatar: '#1976d2',
+    rating: 4.5
+
   },
 ];
 
@@ -87,6 +92,7 @@ const testimonialsSlide = testimonialsData.map((testimonial) => ({
   title: testimonial.title,
   description: testimonial.description,
   avatar: testimonial.avatar,
+  rating: testimonial.rating,
 }));
 
 

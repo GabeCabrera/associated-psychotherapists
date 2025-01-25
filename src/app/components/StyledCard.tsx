@@ -15,6 +15,11 @@ export default function MediaCard(data: any) {
             px: 3,
             borderRadius: 2,
             boxShadow: 'rgba(17, 17, 26, 0.5) 0px 4px 16px, rgba(17, 17, 26, 0.07) 0px 8px 32px',
+            userSelect: 'none',
+            transition: 'transform .2s',
+            '&:hover': {
+                transform: 'scale(1.01)'
+            }
         }}
         >
             <CardContent>
