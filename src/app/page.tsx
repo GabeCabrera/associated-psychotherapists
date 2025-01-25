@@ -11,39 +11,86 @@ import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel'
 import StyledCard from './components/StyledCard';
 
-
 const OPTIONS: EmblaOptionsType = { loop: true }
-const slideData = [
-    {
-        id: 1,
-        title: 'I have been going to therapy with Jason Williams for several years now. Mr. Williams has been very open minded, honest, kind and patient in working with me, even when I was at my very worst.',
-        description: 'Karlie Marsh',
-        avatar: '#1976d2'
-    },
-    {
-        id: 2,
-        title: 'I have been to three different psychologists over the past five years, and Dr. Christensen is by far the best doctor I have ever had. He is an A+ doctor! I would reccomend him to anyone.',
-        description: 'Elisabeth Campbell',
-        avatar: '#1976d2'
-    },
-    {
-        id: 3,
-        title: 'Love Christie Powell, she helped me so much with my anxiety and depression throughout and after my pregnancy. She is very knowledgeable and understanding. She has great techniques for coping and resources.',
-        description: 'Caitlyn Harper',
-        avatar: '#1976d2'
-    },
+
+
+const therapistsData = [
+  {
+    id: 1,
+    title: 'Jason Williams',
+    chips: ['Individual', 'Couples', 'Family'],
+    description: 'Jason Williams is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
+    avatar: 'JW'
+  },
+  {
+    id: 2,
+    title: 'John Arrington',
+    chips: ['Individual', 'Couple', 'Family'],
+    description: 'John Arrington is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
+    avatar: 'JA'
+  },
+  {
+    id: 3,
+    title: 'Cyndi Tangren',
+    chips: ['Marriage', 'Family', 'Couple'],
+    description: 'Cyndi Tangren is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    avatar: 'CT'
+  },
+  {
+    id: 4,
+    title: 'Christi Powell',
+    chips: ['Marriage', 'Family', 'Individual'],
+    description: 'Christi Powell is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    avatar: 'CP'
+  },
+  {
+    id: 5,
+    title: 'Tyler Beckstrand',
+    chips: ['Marriage', 'Family', 'Individual'],
+    description: 'Tyler Beckstrand is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    avatar: 'CP'
+  },
 ];
 
-const SLIDES = slideData.map((slide) => ({
-    key: slide.id,
-    title: slide.title,
-    description: slide.description,
-    avatar: slide.avatar,
+
+const testimonialsData = [
+  {
+    id: 1,
+    title: 'I have been going to therapy with Jason Williams for several years now. Mr. Williams has been very open minded, honest, kind and patient in working with me, even when I was at my very worst.',
+    description: 'Karlie Marsh',
+    avatar: '#1976d2'
+  },
+  {
+    id: 2,
+    title: 'I have been to three different psychologists over the past five years, and Dr. Christensen is by far the best doctor I have ever had. He is an A+ doctor! I would reccomend him to anyone.',
+    description: 'Elisabeth Campbell',
+    avatar: '#1976d2'
+  },
+  {
+    id: 3,
+    title: 'Love Christie Powell, she helped me so much with my anxiety and depression throughout and after my pregnancy. She is very knowledgeable and understanding. She has great techniques for coping and resources.',
+    description: 'Caitlyn Harper',
+    avatar: '#1976d2'
+  },
+];
+
+const therapists = therapistsData.map((therapist) => ({
+  key: therapist.id,
+  title: therapist.title,
+  chips: therapist.chips,
+  description: therapist.description,
+  avatar: therapist.avatar,
+}));
+
+const testimonialsSlide = testimonialsData.map((testimonial) => ({
+  key: testimonial.id,
+  title: testimonial.title,
+  description: testimonial.description,
+  avatar: testimonial.avatar,
 }));
 
 
 export default function Home() {
-
   return (
     <Box>
       <AppAppBar />
@@ -51,7 +98,7 @@ export default function Home() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' }}}
+          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
         >
           <Typography
             variant="h1"
@@ -98,7 +145,7 @@ export default function Home() {
             pt: { xs: 14, sm: 20 },
             pb: { xs: 1, sm: 1 },
           }}>
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          <EmblaCarousel slides={testimonialsSlide} options={OPTIONS} />
         </Container>
         <Container
           sx={{
@@ -111,8 +158,25 @@ export default function Home() {
             borderRadius: 'calc(8px + 8px)',
             boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px'
           }}>
-            <StyledCard />
+          <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+            <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
+              Meet Our Therapists
+            </Typography>
+            <Container
+              sx={{
+                display: 'flex',
+                gap: 3,
+                justifyContent: 'center',
+                flexWrap: 'wrap',
+                width: '100%',
+              }}
+            >
+              {therapists.map((therapist) => (
+                <StyledCard {...therapist} key={therapist.key}/>
+              ))}
+            </Container>
           </Container>
+        </Container>
       </Hero>
       <Footer />
     </Box>
