@@ -1,16 +1,12 @@
 import React from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
-import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
+import { Avatar, Container, Rating, Typography } from '@mui/material'
 import useEmblaCarousel from 'embla-carousel-react'
-import { Avatar, Rating, Typography } from '@mui/material'
+import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
+import { EmblaOptionsType } from 'embla-carousel'
 
 type PropType = {
 
-  slides: { key: number; title: string; description: string; avatar: string, rating: number;}[]
+  slides: { key: number; title: string; description: string; avatar: string, rating: number; }[]
 
   options?: EmblaOptionsType
 
@@ -29,15 +25,15 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="embla">
+    <Container className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
-            <div className="embla__slide" key={slide.key}>
-              <div className="embla__slide__number">
-                  <img className='embla-slide-quote' src='/quote-15-double-open.svg' alt='quote' width={20} />
-                <span className='embla__slide__number__inner'>
-                  <Typography variant="h5">
+            <Container className="embla__slide" key={slide.key}>
+              <Container className="embla__slide__number">
+                <img className='embla-slide-quote' src='/quote-15-double-open.svg' alt='quote' width={20} />
+                <Container className='embla__slide__number__inner'>
+                  <Typography className='embla-slide-title'>
                     {slide.title}
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary" className='embla-slide-description'>
@@ -46,10 +42,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
                   </Typography>
-                </span>
-                  <img className='embla-slide-quote' src='/quote-17-double-close.svg' alt='quote' width={20} />
-              </div>
-            </div>
+                </Container>
+                <img className='embla-slide-quote' src='/quote-17-double-close.svg' alt='quote' width={20} />
+              </Container>
+            </Container>
           ))}
         </div>
       </div>
@@ -60,7 +56,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
-    </section>
+    </Container>
   )
 }
 

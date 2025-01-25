@@ -165,7 +165,7 @@ export default function Home() {
             backgroundImage:
                     'linear-gradient(0deg, rgba(25, 118, 210, 0.7) 0%, rgba(25, 118, 210, 0.9) 20%,rgba(25,118,210,1) 100%)',
           }}>
-          <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+          <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
               Meet Our Therapists
             </Typography>
