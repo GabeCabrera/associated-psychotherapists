@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel'
+import StyledCard from './components/StyledCard';
 
 
 const OPTIONS: EmblaOptionsType = { loop: true }
@@ -31,7 +32,8 @@ const slideData = [
         description: 'Caitlyn Harper',
         avatar: '#1976d2'
     },
-]
+];
+
 const SLIDES = slideData.map((slide) => ({
     key: slide.id,
     title: slide.title,
@@ -49,7 +51,7 @@ export default function Home() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' }}}
         >
           <Typography
             variant="h1"
@@ -94,10 +96,23 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'center',
             pt: { xs: 14, sm: 20 },
-            pb: { xs: 8, sm: 12 },
+            pb: { xs: 1, sm: 1 },
           }}>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </Container>
+        <Container
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            pt: { xs: 1, sm: 5 },
+            pb: { xs: 8, sm: 10 },
+            bgcolor: '#1976d2',
+            borderRadius: 'calc(8px + 8px)',
+            boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px'
+          }}>
+            <StyledCard />
+          </Container>
       </Hero>
       <Footer />
     </Box>

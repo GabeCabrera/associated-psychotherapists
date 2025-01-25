@@ -14,12 +14,11 @@ const Hero: React.FC<HeroProps> = ({ children }) => {
         <Box
             id="hero"
             sx={{
-                width: '100%',
+                width: '100vw',
                 backgroundRepeat: 'no-repeat',
-
                 backgroundImage:
                     'radial-gradient(ellipse 80% 100% at 50% -10%, hsl(210, 100%, 90%), transparent)',
-            }}
+                }}
         >
             <Container
                 sx={{

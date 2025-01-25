@@ -27,7 +27,7 @@ export default function AppAppBar() {
                 bgcolor: 'transparent',
                 backgroundImage: 'none',
                 mt: 'calc(var(--template-frame-height, 0px) + 28px)',
-                zIndex: 1,
+                zIndex: 1000,
             }}
         >
             <Container maxWidth="lg">
