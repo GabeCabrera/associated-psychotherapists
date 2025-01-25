@@ -87,7 +87,7 @@ export default function Footer() {
           </Box>
         </Box>
         <Box>
-        <Typography variant="h5">
+        <Typography variant="h5" gutterBottom sx={{ mt: 3 }}>
                 Contact us
             </Typography>
             <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>

@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
@@ -11,20 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexShrink: 0,
-    borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-    backdropFilter: 'blur(24px)',
-    border: '1px solid',
-    backgroundColor: 'white',
-    padding: '8px 12px',
-    boxShadow: '0px 5px 10px -5px rgba(128, 128, 128, 0.5)',
-
-}));
+import { StyledToolbar } from './StyledToolBar';
 
 export default function AppAppBar() {
     const [open, setOpen] = React.useState(false);
@@ -42,7 +27,7 @@ export default function AppAppBar() {
                 bgcolor: 'transparent',
                 backgroundImage: 'none',
                 mt: 'calc(var(--template-frame-height, 0px) + 28px)',
-                zIndex: 1,
+                zIndex: 1000,
             }}
         >
             <Container maxWidth="lg">
@@ -53,7 +38,7 @@ export default function AppAppBar() {
                         alignItems: 'center',
                         px: 0,
                     }}>
-                        <img src="/ap-logo-primary.svg" alt="logo" width={400} height={60} />
+                        <img src="/ap-logo-primary.svg" alt="logo" width={400} height={60} draggable='false' />
                     </Box>
                     <Box
                         sx={{
@@ -62,7 +47,7 @@ export default function AppAppBar() {
                             alignItems: 'center',
                         }}
                     >
-                        <Button color='primary' variant="text" size="small" sx={{ mr: 3}}>
+                        <Button color='primary' variant="text" size="small" sx={{ mr: 3 }}>
                             Sign in
                         </Button>
                     </Box>
