@@ -29,7 +29,6 @@
 
 .embla__slide__number {
   border-radius: 1.8rem;
-  border-top: #1976d2f8 1.8rem solid;
   margin: 1rem;
   font-size: 4rem;
   font-weight: 600;
@@ -40,7 +39,7 @@
   height: var(--slide-height);
   user-select: none;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;;
+  box-shadow: rgba(17, 17, 26, 0.207) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;;
 }
 
 .embla__slide__number__inner {
@@ -95,14 +94,25 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 3rem;
+  height: 3rem;
   z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.embla__button:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  background-color: #1976d222;
+}
+
+.embla__button:active {
+  transition: 0.2s;
+  transform: scale(1);
 }
 
 .embla__button:disabled {

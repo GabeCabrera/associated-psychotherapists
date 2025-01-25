@@ -11,7 +11,7 @@ import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel'
 import StyledCard from './components/StyledCard';
 
-const OPTIONS: EmblaOptionsType = { loop: true }
+const emblaOptions: EmblaOptionsType = { loop: true }
 
 
 const therapistsData = [
@@ -151,7 +151,7 @@ export default function Home() {
             pt: { xs: 14, sm: 20 },
             pb: { xs: 1, sm: 3 },
           }}>
-          <EmblaCarousel slides={testimonialsSlide} options={OPTIONS} />
+          <EmblaCarousel slides={testimonialsSlide} options={emblaOptions} />
         </Container>
         <Container
           sx={{
