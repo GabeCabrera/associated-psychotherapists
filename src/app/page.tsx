@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import AppAppBar from './components/AppAppBar/AppAppBar'; // Ensure this file exists at the specified path
+import AppAppBar from './components/AppAppBar/AppAppBar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
