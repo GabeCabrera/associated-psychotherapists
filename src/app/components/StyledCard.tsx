@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Avatar, Chip, Container } from '@mui/material';
+import { Avatar, Chip } from '@mui/material';
 
 export default function MediaCard(data: any) {
     return (
@@ -14,7 +14,7 @@ export default function MediaCard(data: any) {
             pb: 3,
             px: 3,
             borderRadius: 2,
-            boxShadow: 'rgba(17, 17, 26, 0.5) 0px 4px 16px, rgba(17, 17, 26, 0.07) 0px 8px 32px',
+            boxShadow: 'rgba(17, 17, 26, 0.27) 0px 4px 12px, rgba(17, 17, 26, 0.07) 0px 8px 10px',
             userSelect: 'none',
             transition: 'transform .2s',
             '&:hover': {

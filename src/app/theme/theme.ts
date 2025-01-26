@@ -18,3 +18,5 @@ function createTheme(themeOptions: {}) {
     };
 }
 // alt color 3f50b5
+// 6DA2D6
+//rgb(239, 237, 225)

@@ -1,6 +1,7 @@
 "use client"
 
 import { Box, Container } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -19,35 +20,35 @@ const therapistsData = [
     id: 1,
     title: 'Jason Williams',
     chips: ['Individual', 'Couples', 'Family'],
-    description: 'Jason Williams is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
+    description: 'Jason Williams dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     avatar: 'JW'
   },
   {
     id: 2,
     title: 'John Arrington',
     chips: ['Individual', 'Couple', 'Family'],
-    description: 'John Arrington is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
+    description: 'John Arrington dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     avatar: 'JA'
   },
   {
     id: 3,
     title: 'Cyndi Tangren',
     chips: ['Marriage', 'Family', 'Couple'],
-    description: 'Cyndi Tangren is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    description: 'Cyndi Tangren dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     avatar: 'CT'
   },
   {
     id: 4,
     title: 'Christi Powell',
     chips: ['Marriage', 'Family', 'Individual'],
-    description: 'Christi Powell is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    description: 'Christi Powell dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     avatar: 'CP'
   },
   {
     id: 5,
     title: 'Tyler Beckstrand',
     chips: ['Marriage', 'Family', 'Individual'],
-    description: 'Tyler Beckstrand is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
+    description: 'Tyler Beckstrand dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     avatar: 'CP'
   },
 ];
@@ -56,24 +57,24 @@ const therapistsData = [
 const testimonialsData = [
   {
     id: 1,
-    title: 'I have been going to therapy with Jason Williams for several years now. Mr. Williams has been very open minded, honest, kind and patient in working with me, even when I was at my very worst.',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     description: 'Karlie Marsh',
-    avatar: '#1976d2',
+    avatar: '#6DA2D6',
     rating: 5
   },
   {
     id: 2,
-    title: 'I have been to three different psychologists over the past five years, and Dr. Christensen is by far the best doctor I have ever had. He is an A+ doctor! I would reccomend him to anyone.',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     description: 'Elisabeth Campbell',
-    avatar: '#1976d2',
+    avatar: '#6DA2D6',
     rating: 5
 
   },
   {
     id: 3,
-    title: 'Love Christie Powell, she helped me so much with my anxiety and depression throughout and after my pregnancy. She is very knowledgeable and understanding. She has great techniques for coping and resources.',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     description: 'Caitlyn Harper',
-    avatar: '#1976d2',
+    avatar: '#6DA2D6',
     rating: 4.5
 
   },
@@ -104,7 +105,10 @@ export default function Home() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{ 
+            alignItems: 'center', 
+            width: { xs: '100%', sm: '70%' },
+        }}
         >
           <Typography
             variant="h1"
@@ -148,8 +152,8 @@ export default function Home() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            pt: { xs: 14, sm: 20 },
-            pb: { xs: 1, sm: 3 },
+            pt: { xs: 14, sm: 10 },
+            pb: { xs: 1, sm: 1 },
           }}>
           <EmblaCarousel slides={testimonialsSlide} options={emblaOptions} />
         </Container>
@@ -159,12 +163,11 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'center',
             pt: { xs: 1, sm: 5 },
-            pb: { xs: 8, sm: 10 },
-            borderRadius: 'calc(8px + 8px)',
+            pb: { xs: 1, sm: 5 },
+            borderRadius: 'calc(8px + 8px) calc(8px + 8px) 0 0',
             boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px',
-            backgroundImage:
-                    'linear-gradient(0deg, rgba(25, 118, 210, 0.7) 0%, rgba(25, 118, 210, 0.9) 20%,rgba(25,118,210,1) 100%)',
-          }}>
+            bgcolor: '#6da2d6',
+            }}>
           <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
               Meet Our Therapists
@@ -183,6 +186,53 @@ export default function Home() {
               ))}
             </Container>
           </Container>
+        </Container>
+        <img src='/intersecting-waves-scattered-alt.svg' alt="logo" width={'100%'} draggable='false' />
+        <Container
+         sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          mt: 12,
+          pt: { xs: 14, sm: 1 },
+          pb: { xs: 1, sm: 3, md: 5, lg: 8 },
+        }}>
+          <Grid container spacing={2}>
+            <Grid size={8}>
+              <Typography 
+                variant="h4" 
+                component="div" 
+                gutterBottom 
+                sx={{ fontFamily: 'Roboto', fontWeight: 400, color: '#1976d2' }}
+              >
+                REACH OUT TODAY
+              </Typography>
+              <Typography 
+                variant="h5" 
+                component="div" 
+                gutterBottom 
+                sx={{ fontFamily: 'Roboto', fontWeight: 300, width: '85%', }}
+                >
+                  Join the community of people who decided to get help and get happy with <span style={{ color: '#1976d2'}}>Associated Psychotherapists</span>
+                </Typography>
+                <Button
+                variant="contained"
+                size="large"
+                fullWidth
+                href="#contact"
+                sx={{ 
+                  mt: 16,
+                  width: '85%',
+
+                 }}
+              >
+                Get Started
+              </Button>
+            </Grid>
+            <Grid size={4}>
+              <img src='/people-cta.png' alt="logo" width={'100%'} draggable='false' style={{ borderRadius: '50% 5px 5px 5px'}}/>
+            </Grid>        
+          </Grid>
         </Container>
       </Hero>
       <Footer />
