@@ -138,6 +138,9 @@ export default function Footer() {
             About us
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
+            Resources
+          </Link>
+          <Link color="text.secondary" variant="body2" href="#">
             Careers
           </Link>
           <Link color="text.secondary" variant="body2" href="#">

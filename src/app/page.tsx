@@ -234,6 +234,9 @@ export default function Home() {
             </Grid>        
           </Grid>
         </Container>
+        <Typography variant='body2' sx={{ textAlign: 'center', mt: 5, color: 'text.secondary' }}>
+          If you are in a crisis or any other person may be in danger - don't use this site. <a href='#' style={{ color: '#1976d2'}}>These resources</a> can provide you with immediate help.
+        </Typography>
       </Hero>
       <Footer />
     </Box>
