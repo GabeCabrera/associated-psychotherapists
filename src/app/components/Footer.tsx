@@ -1,3 +1,5 @@
+"use client";
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -11,7 +13,7 @@ function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link color="text.secondary" href="https://mui.com/">
+      <Link color="text.secondary" href='#'>
         Associated Psychotherapy
       </Link>
       &nbsp;
@@ -82,20 +84,19 @@ export default function Footer() {
                 Subscribe
               </Button>
             </Stack>
-            
           </Box>
         </Box>
         <Box>
-        <Typography variant="h5" gutterBottom>
-                Contact us
-            </Typography>
-            <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>
-                contact@associatedpsych.com<br/>
-                Phone: (123) 456-7890&<br />Fax: (123) 456-7890<br/>
-                120 North Main<br/>
-                Brigham City , UT 84302<br/>
+          <Typography variant="h5" gutterBottom>
+            Contact us
+          </Typography>
+          <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>
+            contact@associatedpsych.com<br />
+            Phone: (123) 456-7890&<br />Fax: (123) 456-7890<br />
+            120 North Main<br />
+            Brigham City , UT 84302<br />
 
-            </Typography>
+          </Typography>
         </Box>
         <Box
           sx={{
@@ -136,7 +137,7 @@ export default function Footer() {
           <Link color="text.secondary" variant="body2" href="#">
             About us
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color="text.secondary" variant="body2" href="/resources">
             Resources
           </Link>
           <Link color="text.secondary" variant="body2" href="#">

@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel'
 import StyledCard from './components/StyledCard';
+import Link from 'next/link';
 
 const emblaOptions: EmblaOptionsType = { loop: true }
 
@@ -235,7 +236,7 @@ export default function Home() {
           </Grid>
         </Container>
         <Typography variant='body2' sx={{ textAlign: 'center', mt: 5, color: 'text.secondary' }}>
-          If you are in a crisis or any other person may be in danger - don't use this site. <a href='#' style={{ color: '#1976d2'}}>These resources</a> can provide you with immediate help.
+          If you are in a crisis or any other person may be in danger - don't use this site. <Link href='/resources' style={{ color: '#1976d2'}}>These resources</Link> can provide you with immediate help.
         </Typography>
       </Hero>
       <Footer />
