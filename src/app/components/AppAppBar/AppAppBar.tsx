@@ -10,6 +10,7 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { StyledToolbar } from './StyledToolBar';
+import Link from 'next/link';
 
 export default function AppAppBar() {
     const [open, setOpen] = React.useState(false);
@@ -38,7 +39,7 @@ export default function AppAppBar() {
                         alignItems: 'center',
                         px: 0,
                     }}>
-                        <img src="/ap-logo-primary.svg" alt="logo" width={400} height={60} draggable='false' />
+                        <Link href='/' style={{ marginBottom: 0, paddingBottom: 0}}><img src="/ap-logo-primary.svg" alt="logo" width={400} height={60} draggable='false' /></Link>
                     </Box>
                     <Box
                         sx={{
