@@ -3,7 +3,9 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import "./globals.css";
+import { Fab } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Associated Psychotherapists",
@@ -19,6 +21,17 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <Fab 
+          color="primary" 
+          aria-label="add" 
+          style={{ 
+            position: 'fixed', 
+            bottom: 40, 
+            right: 40 
+          }}
+        >
+          <QuestionAnswerIcon />
+        </Fab>
       </body>
     </html>
   );

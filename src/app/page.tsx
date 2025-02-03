@@ -97,6 +97,14 @@ const testimonialsSlide = testimonialsData.map((testimonial) => ({
   rating: testimonial.rating,
 }));
 
+const scrolltoHash = (element_id: string, offset: number) => {
+  const element = document.getElementById(element_id);
+  const yOffset = offset;
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
 
 export default function Home() {
   return (
@@ -143,7 +151,7 @@ export default function Home() {
             >
               Get Started
             </Button>
-            <Button variant="outlined" size="large" fullWidth>
+            <Button variant="outlined" size="large" fullWidth onClick={() => scrolltoHash('therapists', -160)}>
               Learn more
             </Button>
           </Stack>
@@ -169,7 +177,7 @@ export default function Home() {
             boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px',
             bgcolor: '#6da2d6',
             }}>
-          <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
+          <Container id='therapists' sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
             <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
               Meet Our Therapists
             </Typography>
