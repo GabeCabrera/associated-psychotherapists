@@ -1,83 +1,19 @@
-"use client"
+'use client'
 
-import { Box, Container } from '@mui/material';
-import Stack from '@mui/material/Stack';
+import { Box, Container, Button, Stack } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import AppAppBar from './components/AppAppBar/AppAppBar'; // Ensure this file exists at the specified path
+import { therapistsData, testimonialsData } from '@/data';
+import { EmblaOptionsType } from 'embla-carousel'
+import AppAppBar from './components/AppAppBar/AppAppBar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
-import { EmblaOptionsType } from 'embla-carousel'
 import StyledCard from './components/StyledCard';
+import Link from 'next/link';
 
 const emblaOptions: EmblaOptionsType = { loop: true }
 
-
-const therapistsData = [
-  {
-    id: 1,
-    title: 'Jason Williams',
-    chips: ['Individual', 'Couples', 'Family'],
-    description: 'Jason Williams is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
-    avatar: 'JW'
-  },
-  {
-    id: 2,
-    title: 'John Arrington',
-    chips: ['Individual', 'Couple', 'Family'],
-    description: 'John Arrington is a licensed therapist with over 10 years of experience. He specializes in individual, couples, and family therapy.',
-    avatar: 'JA'
-  },
-  {
-    id: 3,
-    title: 'Cyndi Tangren',
-    chips: ['Marriage', 'Family', 'Couple'],
-    description: 'Cyndi Tangren is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
-    avatar: 'CT'
-  },
-  {
-    id: 4,
-    title: 'Christi Powell',
-    chips: ['Marriage', 'Family', 'Individual'],
-    description: 'Christi Powell is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
-    avatar: 'CP'
-  },
-  {
-    id: 5,
-    title: 'Tyler Beckstrand',
-    chips: ['Marriage', 'Family', 'Individual'],
-    description: 'Tyler Beckstrand is a licensed therapist with over 10 years of experience. She specializes in marriage, family, and individual therapy.',
-    avatar: 'CP'
-  },
-];
-
-
-const testimonialsData = [
-  {
-    id: 1,
-    title: 'I have been going to therapy with Jason Williams for several years now. Mr. Williams has been very open minded, honest, kind and patient in working with me, even when I was at my very worst.',
-    description: 'Karlie Marsh',
-    avatar: '#1976d2',
-    rating: 5
-  },
-  {
-    id: 2,
-    title: 'I have been to three different psychologists over the past five years, and Dr. Christensen is by far the best doctor I have ever had. He is an A+ doctor! I would reccomend him to anyone.',
-    description: 'Elisabeth Campbell',
-    avatar: '#1976d2',
-    rating: 5
-
-  },
-  {
-    id: 3,
-    title: 'Love Christie Powell, she helped me so much with my anxiety and depression throughout and after my pregnancy. She is very knowledgeable and understanding. She has great techniques for coping and resources.',
-    description: 'Caitlyn Harper',
-    avatar: '#1976d2',
-    rating: 4.5
-
-  },
-];
 
 const therapists = therapistsData.map((therapist) => ({
   key: therapist.id,
@@ -95,6 +31,14 @@ const testimonialsSlide = testimonialsData.map((testimonial) => ({
   rating: testimonial.rating,
 }));
 
+const scrolltoHash = (element_id: string, offset: number) => {
+  const element = document.getElementById(element_id);
+  const yOffset = offset;
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
 
 export default function Home() {
   return (
@@ -104,10 +48,13 @@ export default function Home() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{
+            alignItems: 'center',
+            width: { xs: '100%', sm: '70%' },
+          }}
         >
           <Typography
-            variant="h1"
+            variant='h1'
             sx={{
               textAlign: 'center',
               fontSize: 'clamp(3rem, 10vw, 3rem)',
@@ -131,14 +78,14 @@ export default function Home() {
             sx={{ pt: 2, width: { xs: '100%', sm: '350px' } }}
           >
             <Button
-              variant="contained"
-              size="large"
+              variant='contained'
+              size='large'
               fullWidth
-              href="#contact"
+              href='/schedule'
             >
               Get Started
             </Button>
-            <Button variant="outlined" size="large" fullWidth>
+            <Button variant='outlined' size='large' fullWidth onClick={() => scrolltoHash('therapists', -160)}>
               Learn more
             </Button>
           </Stack>
@@ -148,8 +95,8 @@ export default function Home() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            pt: { xs: 14, sm: 20 },
-            pb: { xs: 1, sm: 3 },
+            pt: { xs: 14, sm: 10 },
+            pb: { xs: 1, sm: 1 },
           }}>
           <EmblaCarousel slides={testimonialsSlide} options={emblaOptions} />
         </Container>
@@ -159,14 +106,12 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'center',
             pt: { xs: 1, sm: 5 },
-            pb: { xs: 8, sm: 10 },
-            borderRadius: 'calc(8px + 8px)',
-            boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px',
-            backgroundImage:
-                    'linear-gradient(0deg, rgba(25, 118, 210, 0.7) 0%, rgba(25, 118, 210, 0.9) 20%,rgba(25,118,210,1) 100%)',
+            pb: { xs: 1, sm: 5 },
+            borderRadius: 'calc(8px + 8px) calc(8px + 8px) 0 0',
+            bgcolor: '#6da2d6',
           }}>
-          <Container sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
-            <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
+          <Container id='therapists' sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
+            <Typography variant='h3' component='div' gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
               Meet Our Therapists
             </Typography>
             <Container
@@ -179,13 +124,62 @@ export default function Home() {
               }}
             >
               {therapists.map((therapist) => (
-                <StyledCard {...therapist} key={therapist.key}/>
+                <StyledCard {...therapist} key={therapist.key} />
               ))}
             </Container>
           </Container>
         </Container>
+        <img src='/intersecting-waves-scattered-alt.svg' alt='logo' width={'100%'} draggable='false' />
+        <Container
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            mt: 12,
+            pt: { xs: 14, sm: 1 },
+            pb: { xs: 1, sm: 3, md: 5, lg: 8 },
+          }}>
+          <Grid container spacing={2}>
+            <Grid size={8}>
+              <Typography
+                variant='h4'
+                component='div'
+                gutterBottom
+                sx={{ fontFamily: 'Roboto', fontWeight: 400, color: '#1976d2' }}
+              >
+                REACH OUT TODAY
+              </Typography>
+              <Typography
+                variant='h5'
+                component='div'
+                gutterBottom
+                sx={{ fontFamily: 'Roboto', fontWeight: 300, width: '85%', }}
+              >
+                Join the community of people who decided to get help and get happy with <span style={{ color: '#1976d2' }}>Associated Psychotherapists</span>
+              </Typography>
+              <Button
+                variant='contained'
+                size='large'
+                fullWidth
+                href='/schedule'
+                sx={{
+                  mt: 16,
+                  width: '85%',
+                }}
+              >
+                Get Started
+              </Button>
+            </Grid>
+            <Grid size={4}>
+              <img src='/people-cta.png' alt='logo' width={'100%'} draggable='false' style={{ borderRadius: '50% 5px 5px 5px' }} />
+            </Grid>
+          </Grid>
+        </Container>
+        <Typography variant='body2' sx={{ textAlign: 'center', mt: 5, color: 'text.secondary' }}>
+          If you are in a crisis or any other person may be in danger - don't use this site. <Link href='/resources' style={{ color: '#1976d2' }}>These resources</Link> can provide you with immediate help.
+        </Typography>
       </Hero>
       <Footer />
     </Box>
   );
-}
+};

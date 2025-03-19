@@ -1,4 +1,5 @@
-import * as React from 'react';
+'use client';
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -10,9 +11,9 @@ import Typography from '@mui/material/Typography';
 
 function Copyright() {
   return (
-    <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+    <Typography variant='body2' sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link color="text.secondary" href="https://mui.com/">
+      <Link color='text.secondary' href='#'>
         Associated Psychotherapy
       </Link>
       &nbsp;
@@ -50,22 +51,22 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '100%' } }}>
-            <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
+            <Typography variant='body2' gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
               Join the newsletter
             </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
+            <Typography variant='body2' sx={{ color: 'text.secondary', mb: 2 }}>
               To recieve updates.
             </Typography>
-            <InputLabel htmlFor="email-newsletter">Email</InputLabel>
-            <Stack direction="row" spacing={1} useFlexGap>
+            <InputLabel htmlFor='email-newsletter'>Email</InputLabel>
+            <Stack direction='row' spacing={1} useFlexGap>
               <TextField
-                id="email-newsletter"
+                id='email-newsletter'
                 hiddenLabel
-                size="small"
-                variant="outlined"
+                size='small'
+                variant='outlined'
                 fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
+                aria-label='Enter your email address'
+                placeholder='Your email address'
                 slotProps={{
                   htmlInput: {
                     autoComplete: 'off',
@@ -75,28 +76,27 @@ export default function Footer() {
                 sx={{ width: '250px' }}
               />
               <Button
-                variant="contained"
-                color="primary"
-                size="small"
+                variant='contained'
+                color='primary'
+                size='small'
                 sx={{ flexShrink: 0 }}
               >
                 Subscribe
               </Button>
             </Stack>
-            
           </Box>
         </Box>
         <Box>
-        <Typography variant="h5" gutterBottom sx={{ mt: 3 }}>
-                Contact us
-            </Typography>
-            <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>
-                contact@associatedpsych.com<br/>
-                Phone: (123) 456-7890&<br />Fax: (123) 456-7890<br/>
-                120 North Main<br/>
-                Brigham City , UT 84302<br/>
+          <Typography variant='h5' gutterBottom>
+            Contact us
+          </Typography>
+          <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>
+            contact@associatedpsych.com<br />
+            Phone: (123) 456-7890<br />Fax: (123) 456-7890<br />
+            120 North Main<br />
+            Brigham City , UT 84302<br />
 
-            </Typography>
+          </Typography>
         </Box>
         <Box
           sx={{
@@ -105,22 +105,22 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+          <Typography variant='body2' sx={{ fontWeight: 'medium' }}>
             Therapists
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             John Arrington
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Jason Williams
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Cyndi Tangren
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Christie Powell
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Tyler Beckstrand
           </Link>
         </Box>
@@ -131,19 +131,22 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+          <Typography variant='body2' sx={{ fontWeight: 'medium' }}>
             Company
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             About us
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='/resources'>
+            Resources
+          </Link>
+          <Link color='text.secondary' variant='body2' href='#'>
             Careers
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             FAQ
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Press
           </Link>
         </Box>
@@ -154,16 +157,16 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+          <Typography variant='body2' sx={{ fontWeight: 'medium' }}>
             Legal
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Terms
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Privacy
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='/schedule'>
             Contact
           </Link>
         </Box>
@@ -179,13 +182,13 @@ export default function Footer() {
         }}
       >
         <div>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Privacy Policy
           </Link>
           <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color='text.secondary' variant='body2' href='#'>
             Terms of Service
           </Link>
           <Copyright />

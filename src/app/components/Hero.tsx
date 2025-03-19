@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ children }) => {
                 width: '100vw',
                 backgroundRepeat: 'no-repeat',
                 backgroundImage:
-                    'radial-gradient(ellipse 80% 100% at 50% -10%, hsl(210, 100%, 90%), transparent)',
+                    'radial-gradient(ellipse 80% 100% at 50% -10%, rgb(239, 237, 225),rgba(239, 237, 225, 0.21))',
                 }}
         >
             <Container

@@ -1,8 +1,9 @@
-import React from 'react'
-import { Avatar, Container, Rating, Typography } from '@mui/material'
-import useEmblaCarousel from 'embla-carousel-react'
-import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
-import { EmblaOptionsType } from 'embla-carousel'
+import React from 'react';
+import { Avatar, Container, Rating } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import useEmblaCarousel from 'embla-carousel-react';
+import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
+import { EmblaOptionsType } from 'embla-carousel';
 
 type PropType = {
 

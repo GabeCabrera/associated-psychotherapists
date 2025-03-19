@@ -18,3 +18,5 @@ function createTheme(themeOptions: {}) {
     };
 }
 // alt color 3f50b5
+// light blue 6DA2D6
+//background hero rgb(239, 237, 225)
