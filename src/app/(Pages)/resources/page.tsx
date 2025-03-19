@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import AppAppBar from "@/app/components/AppAppBar/AppAppBar";
-import Footer from "@/app/components/Footer";
-import Hero from "@/app/components/Hero";
-import { Box, Card, Container, Typography } from "@mui/material";
-import { resourceData } from "@/data";
+import AppAppBar from '@/app/components/AppAppBar/AppAppBar';
+import Footer from '@/app/components/Footer';
+import Hero from '@/app/components/Hero';
+import { Box, Card, Container, Typography } from '@mui/material';
+import { resourceData } from '@/data';
 
 export default function Resources() {
     return (
@@ -33,7 +33,7 @@ export default function Resources() {
                         }}
                     >
                         <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, mt: 3 }}>
+                            <Typography variant='h3' component='div' gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, mt: 3 }}>
                                 United States
                             </Typography>
                         </Container>
@@ -82,8 +82,8 @@ export default function Resources() {
                         </Container>
                     </Card>
                     <Typography 
-                        variant="subtitle1" 
-                        component="div" 
+                        variant='subtitle1' 
+                        component='div' 
                         gutterBottom 
                         sx={{ 
                             fontFamily: 'Roboto', 

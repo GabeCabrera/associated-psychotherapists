@@ -26,19 +26,19 @@ export default function MediaCard(data: any) {
         }}
         >
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                <Typography gutterBottom variant='h5' component='div' sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     {data.avatar && <Avatar sx={{ height: '4rem', width: '4rem' }}>{data.avatar}</Avatar>}{data.title}
                 </Typography>
                 {data.chips.map((chip: any) => (
                     <Chip key={chip} label={chip} size='small' sx={{ m: 0.5 }} />
                 ))}
                 <br />
-                <Typography variant="body2" color="text.secondary" sx={{ mt: 1.5 }}>
+                <Typography variant='body2' color='text.secondary' sx={{ mt: 1.5 }}>
                     {data.description}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" sx={{ p: 1 }} href='/about' onClick={() => setTherapist(data)}>Learn More</Button>
+                <Button size='small' sx={{ p: 1 }} href='/about' onClick={() => setTherapist(data)}>Learn More</Button>
             </CardActions>
         </Card>
     )

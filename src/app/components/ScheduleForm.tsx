@@ -81,63 +81,63 @@ export default function ScheduleForm() {
     return (
         <Grid container spacing={2}>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel htmlFor="first-name" required>
+                <FormLabel htmlFor='first-name' required>
                     First name
                 </FormLabel>
                 <OutlinedInput
-                    id="first-name"
-                    name="first-name"
-                    type="name"
-                    placeholder="First Name"
-                    autoComplete="first name"
+                    id='first-name'
+                    name='first-name'
+                    type='name'
+                    placeholder='First Name'
+                    autoComplete='first name'
                     required
                     onChange={handleFirstNameChange}
                 />
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel htmlFor="last-name" required>
+                <FormLabel htmlFor='last-name' required>
                     Last name
                 </FormLabel>
                 <OutlinedInput
-                    id="last-name"
-                    name="last-name"
-                    type="name"
-                    placeholder="Last Name"
-                    autoComplete="last name"
+                    id='last-name'
+                    name='last-name'
+                    type='name'
+                    placeholder='Last Name'
+                    autoComplete='last name'
                     required
                     onChange={handleLastNameChange}
                 />
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel htmlFor="phone" required>
+                <FormLabel htmlFor='phone' required>
                     Phone
                 </FormLabel>
                 <OutlinedInput
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="(___) ___-____"
-                    autoComplete="tel"
+                    id='phone'
+                    name='phone'
+                    type='tel'
+                    placeholder='(___) ___-____'
+                    autoComplete='tel'
                     required
                     value={userData.phone}
                     onChange={handlePhoneChange}
                 />
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel htmlFor="country">
+                <FormLabel htmlFor='country'>
                     Email
                 </FormLabel>
                 <OutlinedInput
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Email"
+                    id='email'
+                    name='email'
+                    type='email'
+                    placeholder='Email'
                     onChange={handleEmailChange}
                 />
                 {emailError && <FormHelperText error>{emailError}</FormHelperText>}
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel htmlFor="last-name" required>
+                <FormLabel htmlFor='last-name' required>
                     Preferred Date
                 </FormLabel>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -149,10 +149,10 @@ export default function ScheduleForm() {
                 </LocalizationProvider>
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={6}>
-                <FormLabel id="demo-simple-select-label">Preferred Time</FormLabel>
+                <FormLabel id='demo-simple-select-label'>Preferred Time</FormLabel>
                 <Select
                     value={userData.prefTime}
-                    label="Preferred Time"
+                    label='Preferred Time'
                     onChange={handleTimeChange}
                 >
                     {timeOptions}
@@ -160,23 +160,23 @@ export default function ScheduleForm() {
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column' }} size={12}>
                 <TextField
-                    id="outlined-multiline-static"
-                    label="Any additional information you would like to provide."
+                    id='outlined-multiline-static'
+                    label='Any additional information you would like to provide.'
                     multiline
                     rows={4}
                     onChange={handleMessageChange}
                 />
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column', mb: 0 }} size={12}>
-                <Typography variant="subtitle1" component="div" gutterBottom sx={{ fontWeight: 300, fontSize: '0.8rem', mt: 0, mb: 0 }}>
+                <Typography variant='subtitle1' component='div' gutterBottom sx={{ fontWeight: 300, fontSize: '0.8rem', mt: 0, mb: 0 }}>
                     Please do not submit any <a href='https://cphs.berkeley.edu/hipaa/hipaa18.html' style={{ color: '#1976d2' }}>Protected Health Information </a>.
                 </Typography>
-                <Typography variant="subtitle1" sx={{ fontWeight: 300, fontSize: '0.8rem', mt: 0 }} gutterBottom>
+                <Typography variant='subtitle1' sx={{ fontWeight: 300, fontSize: '0.8rem', mt: 0 }} gutterBottom>
                     By clicking submit you agree that the phone number you provided may be used to contact you (including autodialed or pre-recorded calls).
                 </Typography>
             </Grid>
             <Grid sx={{ display: 'flex', flexDirection: 'column'}} size={12} >
-                <Button variant='contained' type="submit" onClick={handleSubmit}>Submit</Button>
+                <Button variant='contained' type='submit' onClick={handleSubmit}>Submit</Button>
             </Grid>
         </Grid>
     );

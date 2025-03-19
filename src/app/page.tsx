@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Box, Container, Button, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -54,7 +54,7 @@ export default function Home() {
           }}
         >
           <Typography
-            variant="h1"
+            variant='h1'
             sx={{
               textAlign: 'center',
               fontSize: 'clamp(3rem, 10vw, 3rem)',
@@ -78,14 +78,14 @@ export default function Home() {
             sx={{ pt: 2, width: { xs: '100%', sm: '350px' } }}
           >
             <Button
-              variant="contained"
-              size="large"
+              variant='contained'
+              size='large'
               fullWidth
-              href="/schedule"
+              href='/schedule'
             >
               Get Started
             </Button>
-            <Button variant="outlined" size="large" fullWidth onClick={() => scrolltoHash('therapists', -160)}>
+            <Button variant='outlined' size='large' fullWidth onClick={() => scrolltoHash('therapists', -160)}>
               Learn more
             </Button>
           </Stack>
@@ -111,7 +111,7 @@ export default function Home() {
             bgcolor: '#6da2d6',
           }}>
           <Container id='therapists' sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
-            <Typography variant="h3" component="div" gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
+            <Typography variant='h3' component='div' gutterBottom sx={{ fontFamily: 'Roboto', fontWeight: 300, color: 'white' }}>
               Meet Our Therapists
             </Typography>
             <Container
@@ -129,7 +129,7 @@ export default function Home() {
             </Container>
           </Container>
         </Container>
-        <img src='/intersecting-waves-scattered-alt.svg' alt="logo" width={'100%'} draggable='false' />
+        <img src='/intersecting-waves-scattered-alt.svg' alt='logo' width={'100%'} draggable='false' />
         <Container
           sx={{
             display: 'flex',
@@ -142,26 +142,26 @@ export default function Home() {
           <Grid container spacing={2}>
             <Grid size={8}>
               <Typography
-                variant="h4"
-                component="div"
+                variant='h4'
+                component='div'
                 gutterBottom
                 sx={{ fontFamily: 'Roboto', fontWeight: 400, color: '#1976d2' }}
               >
                 REACH OUT TODAY
               </Typography>
               <Typography
-                variant="h5"
-                component="div"
+                variant='h5'
+                component='div'
                 gutterBottom
                 sx={{ fontFamily: 'Roboto', fontWeight: 300, width: '85%', }}
               >
                 Join the community of people who decided to get help and get happy with <span style={{ color: '#1976d2' }}>Associated Psychotherapists</span>
               </Typography>
               <Button
-                variant="contained"
-                size="large"
+                variant='contained'
+                size='large'
                 fullWidth
-                href="#contact"
+                href='/schedule'
                 sx={{
                   mt: 16,
                   width: '85%',
@@ -171,7 +171,7 @@ export default function Home() {
               </Button>
             </Grid>
             <Grid size={4}>
-              <img src='/people-cta.png' alt="logo" width={'100%'} draggable='false' style={{ borderRadius: '50% 5px 5px 5px' }} />
+              <img src='/people-cta.png' alt='logo' width={'100%'} draggable='false' style={{ borderRadius: '50% 5px 5px 5px' }} />
             </Grid>
           </Grid>
         </Container>

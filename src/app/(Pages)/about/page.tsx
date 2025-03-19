@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import AppAppBar from "@/app/components/AppAppBar/AppAppBar";
-import Footer from "@/app/components/Footer";
-import Hero from "@/app/components/Hero";
-import { Avatar, Box, Button, Card, Chip, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
+import AppAppBar from '@/app/components/AppAppBar/AppAppBar';
+import Footer from '@/app/components/Footer';
+import Hero from '@/app/components/Hero';
+import { Avatar, Box, Button, Card, Chip, Container, Divider, Tab, Tabs, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import { useTherapistStore } from "@/store/therapistStore";
-import { useState } from "react";
+import { useTherapistStore } from '@/store/therapistStore';
+import { useState } from 'react';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -52,14 +52,14 @@ const styles = {
     },
 };
 
-const Method = ({ children }: { children: React.ReactNode }) => <Typography variant="subtitle2" sx={{ px: 1 }}>{children}</Typography>
+const Method = ({ children }: { children: React.ReactNode }) => <Typography variant='subtitle2' sx={{ px: 1 }}>{children}</Typography>
 
 const CustomTabPanel = (props: TabPanelProps) => {
     const { children, value, index, ...other } = props;
 
     return (
         <div
-            role="tabpanel"
+            role='tabpanel'
             hidden={value !== index}
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
@@ -99,7 +99,7 @@ export default function About() {
                             <Grid sx={{ bgcolor: '#6da2d6', p: 2 }}>
                                 <Grid sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                                     <Avatar sx={{ height: '8rem', width: '8rem', mr: 2, bgcolor: 'rgba(171, 204, 237, 0.75)', color: 'rgba(0, 0, 0, 0.60)' }}>{therapist.avatar}</Avatar>
-                                    <Typography variant="h4" component="div" gutterBottom sx={ styles.typography }>
+                                    <Typography variant='h4' component='div' gutterBottom sx={ styles.typography }>
                                         {therapist.title}<br />
                                         {therapist.chips.map((chip: any) => (
                                             <Chip key={chip} label={chip} size='small' sx={styles.chip} />
@@ -107,16 +107,16 @@ export default function About() {
                                     </Typography>
                                 </Grid>
                             </Grid>
-                            <img src='/intersecting-waves-scattered-alt.svg' alt="logo" width={'100%'} draggable='false' />
+                            <img src='/intersecting-waves-scattered-alt.svg' alt='logo' width={'100%'} draggable='false' />
                             <Grid sx={{ pt: 3 }}>
                                 <Box sx={{ width: '100%' }}>
                                     <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                            <Tab label="About Me" {...tabProps(0)} />
-                                            <Tab label="Professional Experience" {...tabProps(1)} />
-                                            <Tab label="Reviews" {...tabProps(2)} />
+                                        <Tabs value={value} onChange={handleChange} aria-label='basic tabs example'>
+                                            <Tab label='About Me' {...tabProps(0)} />
+                                            <Tab label='Professional Experience' {...tabProps(1)} />
+                                            <Tab label='Reviews' {...tabProps(2)} />
                                         </Tabs>
-                                        <Button variant="contained" size="small" sx={styles.button} href='/schedule'>
+                                        <Button variant='contained' size='small' sx={styles.button} href='/schedule'>
                                             Schedule an appointment
                                         </Button>
                                     </Box>

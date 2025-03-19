@@ -21,7 +21,7 @@ export default function AppAppBar() {
 
     return (
         <AppBar
-            position="fixed"
+            position='fixed'
             enableColorOnDark
             sx={{
                 boxShadow: 0,
@@ -31,15 +31,15 @@ export default function AppAppBar() {
                 zIndex: 1000,
             }}
         >
-            <Container maxWidth="lg">
-                <StyledToolbar variant="dense" disableGutters>
+            <Container maxWidth='lg'>
+                <StyledToolbar variant='dense' disableGutters>
                     <Box sx={{
                         flexGrow: 1,
                         display: 'flex',
                         alignItems: 'center',
                         px: 0,
                     }}>
-                        <Link href='/' style={{ marginBottom: 0, paddingBottom: 0}}><img src="/ap-logo-primary.svg" alt="logo" width={400} height={60} draggable='false' /></Link>
+                        <Link href='/' style={{ marginBottom: 0, paddingBottom: 0}}><img src='/ap-logo-primary.svg' alt='logo' width={400} height={60} draggable='false' /></Link>
                     </Box>
                     <Box
                         sx={{
@@ -48,19 +48,19 @@ export default function AppAppBar() {
                             alignItems: 'center',
                         }}
                     >
-                        <Button color='primary' variant="text" size="small" href={'/schedule'} sx={{ fontWeight: 600 }}>
+                        <Button color='primary' variant='text' size='small' href={'/schedule'} sx={{ fontWeight: 600 }}>
                             Schedule an Appointment
                         </Button>
-                        <Button color='primary' variant="text" size="small" href={'/'} sx={{ mr: 3, fontWeight: 600 }}>
+                        <Button color='primary' variant='text' size='small' href={'/'} sx={{ mr: 3, fontWeight: 600 }}>
                             Home
                         </Button>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
-                        <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+                        <IconButton aria-label='Menu button' onClick={toggleDrawer(true)}>
                             <MenuIcon />
                         </IconButton>
                         <Drawer
-                            anchor="top"
+                            anchor='top'
                             open={open}
                             onClose={toggleDrawer(false)}
                             PaperProps={{
@@ -88,7 +88,7 @@ export default function AppAppBar() {
 
                                 <Divider sx={{ my: 3 }} />
                                 <MenuItem>
-                                    <Button color="primary" variant="outlined" fullWidth>
+                                    <Button color='primary' variant='outlined' fullWidth>
                                         Sign in
                                     </Button>
                                 </MenuItem>
