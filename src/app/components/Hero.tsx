@@ -12,7 +12,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ children }) => {
     return (
         <Box
-            id="hero"
+            id='hero'
             sx={{
                 width: '100vw',
                 backgroundRepeat: 'no-repeat',

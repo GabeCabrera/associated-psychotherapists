@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import AppAppBar from "@/app/components/AppAppBar/AppAppBar";
-import Footer from "@/app/components/Footer";
-import Hero from "@/app/components/Hero";
-import ScheduleForm from "@/app/components/ScheduleForm";
-import { Box, Card, Container, Typography } from "@mui/material";
+import AppAppBar from '@/app/components/AppAppBar/AppAppBar';
+import Footer from '@/app/components/Footer';
+import Hero from '@/app/components/Hero';
+import ScheduleForm from '@/app/components/ScheduleForm';
+import { Box, Card, Container, Typography } from '@mui/material';
 
 export default function Resources() {
     return (
@@ -33,7 +33,7 @@ export default function Resources() {
                         }}
                     >
                           <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <Typography variant="h3" component="div" gutterBottom sx={{ fontWeight: 300, mt: 4, fontSize: { xs: 24, sm: 28, md: 32, lg: 48 } }}>
+                            <Typography variant='h3' component='div' gutterBottom sx={{ fontWeight: 300, mt: 4, fontSize: { xs: 24, sm: 28, md: 32, lg: 48 } }}>
                                 Register For a Consultation
                             </Typography>
                             <ScheduleForm />
