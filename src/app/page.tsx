@@ -1,18 +1,16 @@
 "use client"
 
-import { Box, Container } from '@mui/material';
+import { Box, Container, Button, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { therapistsData, testimonialsData } from '@/data';
+import { EmblaOptionsType } from 'embla-carousel'
 import AppAppBar from './components/AppAppBar/AppAppBar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import EmblaCarousel from './components/EmblaCarousel/EmblaCarousel';
-import { EmblaOptionsType } from 'embla-carousel'
 import StyledCard from './components/StyledCard';
 import Link from 'next/link';
-import { therapistsData, testimonialsData } from '@/data';
 
 const emblaOptions: EmblaOptionsType = { loop: true }
 
@@ -83,7 +81,7 @@ export default function Home() {
               variant="contained"
               size="large"
               fullWidth
-              href="#contact"
+              href="/schedule"
             >
               Get Started
             </Button>
@@ -110,7 +108,6 @@ export default function Home() {
             pt: { xs: 1, sm: 5 },
             pb: { xs: 1, sm: 5 },
             borderRadius: 'calc(8px + 8px) calc(8px + 8px) 0 0',
-            boxShadow: 'rgba(25, 118, 210, 0.4) 0px 5px, rgba(25, 118, 210, 0.3) 0px 10px, rgba(25, 118, 210, 0.2) 0px 15px, rgba(25, 118, 210, 0.1) 0px 20px, rgba(25, 118, 210, 0.05) 0px 25px',
             bgcolor: '#6da2d6',
           }}>
           <Container id='therapists' sx={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', pt: { xs: 3 } }}>
@@ -168,7 +165,6 @@ export default function Home() {
                 sx={{
                   mt: 16,
                   width: '85%',
-
                 }}
               >
                 Get Started
@@ -186,4 +182,4 @@ export default function Home() {
       <Footer />
     </Box>
   );
-}
+};

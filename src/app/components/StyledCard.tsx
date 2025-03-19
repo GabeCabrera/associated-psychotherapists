@@ -5,7 +5,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Avatar, Chip } from '@mui/material';
 
+import { useTherapistStore } from '@/store/therapistStore';
+
 export default function MediaCard(data: any) {
+    const { therapist, setTherapist } = useTherapistStore();
+
     return (
         <Card sx={{
             width: 270,
@@ -23,7 +27,7 @@ export default function MediaCard(data: any) {
         >
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                    <Avatar sx={{ height: '4rem', width: '4rem' }}>{data.avatar}</Avatar>{data.title}
+                    {data.avatar && <Avatar sx={{ height: '4rem', width: '4rem' }}>{data.avatar}</Avatar>}{data.title}
                 </Typography>
                 {data.chips.map((chip: any) => (
                     <Chip key={chip} label={chip} size='small' sx={{ m: 0.5 }} />
@@ -34,7 +38,7 @@ export default function MediaCard(data: any) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" sx={{ p: 1 }}>Learn More</Button>
+                <Button size="small" sx={{ p: 1 }} href='/about' onClick={() => setTherapist(data)}>Learn More</Button>
             </CardActions>
         </Card>
     )

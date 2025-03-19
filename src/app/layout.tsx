@@ -3,8 +3,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import "./globals.css";
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import { Fab } from "@mui/material";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <Fab 
+        {/* <Fab 
           color="primary" 
           aria-label="add" 
           style={{ 
@@ -31,7 +31,7 @@ export default function RootLayout({
           }}
         >
           <QuestionAnswerIcon />
-        </Fab>
+        </Fab> */}
       </body>
     </html>
   );

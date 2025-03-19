@@ -48,8 +48,11 @@ export default function AppAppBar() {
                             alignItems: 'center',
                         }}
                     >
-                        <Button color='primary' variant="text" size="small" sx={{ mr: 3 }}>
-                            Sign in
+                        <Button color='primary' variant="text" size="small" href={'/schedule'} sx={{ fontWeight: 600 }}>
+                            Schedule an Appointment
+                        </Button>
+                        <Button color='primary' variant="text" size="small" href={'/'} sx={{ mr: 3, fontWeight: 600 }}>
+                            Home
                         </Button>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>

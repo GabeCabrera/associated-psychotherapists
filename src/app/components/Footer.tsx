@@ -92,7 +92,7 @@ export default function Footer() {
           </Typography>
           <Typography variant='body1' sx={{ color: 'text.secondary', mt: 2 }}>
             contact@associatedpsych.com<br />
-            Phone: (123) 456-7890&<br />Fax: (123) 456-7890<br />
+            Phone: (123) 456-7890<br />Fax: (123) 456-7890<br />
             120 North Main<br />
             Brigham City , UT 84302<br />
 
@@ -166,7 +166,7 @@ export default function Footer() {
           <Link color="text.secondary" variant="body2" href="#">
             Privacy
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          <Link color="text.secondary" variant="body2" href="/schedule">
             Contact
           </Link>
         </Box>

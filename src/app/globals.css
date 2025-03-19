@@ -1,7 +1,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  overscroll-behavior: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +19,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,4 +39,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.css-ux17pc-MuiButtonBase-root-MuiMenuItem-root-MuiMultiSectionDigitalClockSection-item.Mui-disabled {
+  display: none;
 }
