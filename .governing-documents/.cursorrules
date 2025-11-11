@@ -1,0 +1,138 @@
+# Associated Psych Development Rules
+
+You are an AI assistant working on the **Associated Psych Platform** — a SaaS solution for therapists and clients.
+
+## 🎯 Primary Directives
+
+1. **ALWAYS read and reference** `constitution.md` before making architectural, UX, or design decisions
+2. **ALWAYS read and reference** `clarifications.md` for implementation details (database schema, API patterns, folder structure, etc.)
+3. **NEVER deviate** from the established standards unless explicitly instructed by Gabe Cabrera
+4. **ALWAYS maintain coherence** across all code, design, and architectural decisions
+
+## 📚 Governing Documents
+
+### constitution.md
+Defines:
+- Architecture principles (Next.js 14, Supabase, Stripe, Vercel)
+- Tech stack and rationale
+- UX design flows and ethos
+- UI standards (colors, typography, motion, components)
+- Security and data flow principles
+- Design philosophy (empathy, trust, simplicity)
+
+### clarifications.md
+Provides:
+- Complete folder structure and file naming conventions
+- Detailed database schema with tables, columns, indexes
+- Row Level Security (RLS) policy examples
+- Environment variable specifications
+- API design patterns and response formats
+- Testing strategy and accessibility requirements
+- HIPAA compliance guidelines
+- Error handling patterns
+
+## 🔧 When Generating Code
+
+### File Creation
+- Use the folder structure defined in `clarifications.md` Section 1
+- Follow naming conventions (PascalCase for components, camelCase for utils)
+- Place files in the appropriate directory (`/components/ui`, `/lib/utils`, etc.)
+
+### Database Operations
+- Reference the schema in `clarifications.md` Section 2
+- Always include `created_at`, `updated_at`, soft delete `deleted_at`
+- Use UUID primary keys with `gen_random_uuid()`
+- Create appropriate indexes for foreign keys and query patterns
+- Implement RLS policies following examples in Section 3
+
+### API Routes
+- Follow REST conventions from `clarifications.md` Section 5
+- Use standard response format (success, data, meta/error)
+- Return appropriate HTTP status codes
+- Implement pagination for list endpoints
+- Include proper error handling with user-friendly messages
+
+### Components
+- Use UI palette from `constitution.md` Section IV.1
+  - Background: `#E6EEF5`
+  - Primary: `#1A365D`
+  - Accent: `#6B8EAE`
+  - Text: `#2D3748`
+- Follow motion standards (200-300ms ease-in-out)
+- Use Framer Motion for transitions
+- Use Lucide Icons for all icons
+- Ensure WCAG 2.1 AA compliance (keyboard nav, screen readers, focus management)
+
+### TypeScript
+- Enable strict mode and all quality checks
+- Never use `any` — always type properly
+- Export types in `*.types.ts` files in `/lib/types`
+
+## 🎨 Design Philosophy
+
+- **Empathetic & calm** — reduce cognitive load
+- **Clinical & professional** — trust is paramount
+- **Minimal & modern** — no marketing noise
+- **Accessible first** — WCAG 2.1 AA compliance mandatory
+- **Progressive disclosure** — show information only when needed
+
+## 🔐 Security Mindset
+
+- **Zero-trust** — validate everything server-side
+- **Least privilege** — users only access their own data
+- **RLS policies** — enforce at database level
+- **Encryption** — sensitive fields (notes, messages) encrypted at rest
+- **Audit logs** — track all sensitive operations
+- **No PHI** — platform is NOT HIPAA-compliant yet (see clarifications.md Section 8)
+
+## ✅ Before Responding to Requests
+
+1. **Check if it involves architecture** → Reference `constitution.md` Section I
+2. **Check if it involves database** → Reference `clarifications.md` Section 2-3
+3. **Check if it involves API design** → Reference `clarifications.md` Section 5
+4. **Check if it involves UI/UX** → Reference `constitution.md` Section IV
+5. **Check if it involves security/data** → Reference `constitution.md` Section III + `clarifications.md` Section 3
+
+## 🚫 Never Do This
+
+- Create files outside the established folder structure
+- Use different color schemes or typography
+- Implement features that store PHI without HIPAA compliance
+- Skip RLS policies on database tables
+- Use non-standard API response formats
+- Create inaccessible UI components
+- Ignore TypeScript strict mode errors
+
+## 💡 When Uncertain
+
+- **Read the governing documents first**
+- Ask clarifying questions if the documents don't cover the scenario
+- Default to the simplest, most secure, most accessible solution
+- Prioritize user trust and data privacy above all else
+
+## 📝 Code Quality Standards
+
+- Write tests following the testing pyramid (clarifications.md Section 6)
+- Follow commit message conventions (clarifications.md Section 11)
+- Use ESLint and Prettier (standards in clarifications.md Section 11)
+- Document complex logic with comments
+- Keep functions small and single-purpose
+
+## 🎯 Project Context
+
+**Platform:** Multi-tenant SaaS for therapist-client connection
+**Users:** Therapists (providers), Clients (users), Admins
+**Core Features:** Profile management, booking/scheduling, secure messaging, payments
+**Tech Stack:** Next.js 14 + TypeScript + Supabase + Stripe + Vercel + TailwindCSS + Framer Motion
+
+## 🔄 Version Control
+
+**Repository:** amari
+**Owner:** GabeCabrera
+**Branch Strategy:** Work on feature branches, merge to `dev`, deploy from `main`
+
+---
+
+**These rules are mandatory for all interactions. Read constitution.md and clarifications.md before making decisions.**
+
+Read .cursorrules, constitution.md, clarifications.md, and plan.md before responding.
