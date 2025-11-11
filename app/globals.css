@@ -5,37 +5,42 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: #E6EEF5;
-    --primary: #1A365D;
-    --accent: #6B8EAE;
-    --whitespace: #F7FAFC;
-    --text: #2D3748;
-  }
+    :root {
+        --background: #E6EEF5;
+        --primary: #1A365D;
+        --accent: #6B8EAE;
+        --whitespace: #F7FAFC;
+        --text: #2D3748;
+    }
 
-  body {
-    @apply bg-background text-text font-body;
-  }
+    body {
+        @apply bg-background text-text font-body;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-semibold;
+    }
 
-  button {
-    @apply font-button font-medium;
-  }
+    button {
+        @apply font-button font-medium;
+    }
 }
 
 @layer components {
-  .btn {
-    @apply rounded-xl shadow-sm transition-transform duration-200 ease-in-out hover:scale-105;
-  }
+    .btn {
+        @apply rounded-xl shadow-sm transition-transform duration-200 ease-in-out hover:scale-105;
+    }
 
-  .card {
-    @apply rounded-xl shadow-md backdrop-blur-sm;
-  }
+    .card {
+        @apply rounded-xl shadow-md backdrop-blur-sm;
+    }
 
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4;
-  }
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4;
+    }
 }
