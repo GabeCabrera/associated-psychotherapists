@@ -11,23 +11,23 @@
 ## **PHASE 0: PROJECT FOUNDATION**
 **Timeline:** Week 1-2
 
-### 1. Repository & Environment Setup ✅ COMPLETE
+### 1. Repository & Environment Setup
 
-- [x] Initialize Next.js 14 project with App Router
-- [x] Configure TypeScript with strict mode
-- [x] Set up TailwindCSS with custom theme (color palette from constitution)
-- [x] Install core dependencies: Framer Motion, Lucide Icons
-- [x] Configure ESLint, Prettier per clarifications.md standards
-- [x] Create `.env.example` with all required variables
-- [x] Set up folder structure exactly as defined in clarifications.md Section 1
+- [ ] Initialize Next.js 14 project with App Router
+- [ ] Configure TypeScript with strict mode
+- [ ] Set up TailwindCSS with custom theme (color palette from constitution)
+- [ ] Install core dependencies: Framer Motion, Lucide Icons
+- [ ] Configure ESLint, Prettier per clarifications.md standards
+- [ ] Create `.env.example` with all required variables
+- [ ] Set up folder structure exactly as defined in clarifications.md Section 1
 
-### 2. Supabase Project Initialization ✅ COMPLETE
+### 2. Supabase Project Initialization
 
-- [x] Create Supabase project
-- [x] Configure authentication settings (email + OAuth providers)
-- [x] Set up database connection
-- [x] Initialize migration system
-- [x] Configure storage buckets for avatars, documents
+- [ ] Create Supabase project
+- [ ] Configure authentication settings (email + OAuth providers)
+- [ ] Set up database connection
+- [ ] Initialize migration system
+- [ ] Configure storage buckets for avatars, documents
 
 ### 3. Development Tooling
 
@@ -39,35 +39,35 @@
 
 ### 4. Core Utilities & Types
 
-- [x] Create base TypeScript types (`/lib/types/database.types.ts`)
-- [x] Build Supabase client utilities (`/lib/supabase/client.ts`, `server.ts`)
-- [x] Create formatting utilities (`/lib/utils/formatting.ts`, `date.ts`)
-- [x] Build API client wrapper (`/lib/api/client.ts`) with error handling
-- [x] Create constants file (`/lib/constants/routes.ts`, `config.ts`)
-- [x] Create validation utilities (`/lib/utils/validation.ts`)
-- [x] Create index exports for cleaner imports
+- [ ] Create base TypeScript types (`/lib/types/database.types.ts`)
+- [ ] Build Supabase client utilities (`/lib/supabase/client.ts`, `server.ts`)
+- [ ] Create formatting utilities (`/lib/utils/formatting.ts`, `date.ts`)
+- [ ] Build API client wrapper (`/lib/api/client.ts`) with error handling
+- [ ] Create constants file (`/lib/constants/routes.ts`, `config.ts`)
+- [ ] Create validation utilities (`/lib/utils/validation.ts`)
+- [ ] Create index exports for cleaner imports
 
 ---
 
 ## **PHASE 1: AUTHENTICATION & BASE LAYOUT**
 **Timeline:** Week 3-4
 
-### 1. Auth Infrastructure ✅ COMPLETE
+### 1. Auth Infrastructure
 
-- [x] Create `profiles` table with RLS policies
-- [x] Implement Supabase Auth integration
-- [x] Build auth middleware for protected routes
-- [x] Create `useAuth` hook
-- [x] Set up session management with auto-logout
+- [ ] Create `profiles` table with RLS policies
+- [ ] Implement Supabase Auth integration
+- [ ] Build auth middleware for protected routes
+- [ ] Create `useAuth` hook
+- [ ] Set up session management with auto-logout
 
-### 2. Auth UI Components ✅ COMPLETE
+### 2. Auth UI Components
 
-- [x] Design and build `/components/ui/input.tsx`, `button.tsx`, `card.tsx`
-- [x] Create login page (`/app/(auth)/login/page.tsx`)
-- [x] Create signup page with role selection (therapist/client)
-- [x] Build password reset flow
-- [x] Add form validation utilities
-- [x] Implement error toast notifications (`/components/ui/toast.tsx`)
+- [ ] Design and build `/components/ui/input.tsx`, `button.tsx`, `card.tsx`
+- [ ] Create login page (`/app/(auth)/login/page.tsx`)
+- [ ] Create signup page with role selection (therapist/client)
+- [ ] Build password reset flow
+- [ ] Add form validation utilities
+- [ ] Implement error toast notifications (`/components/ui/toast.tsx`)
 
 ### 3. Base Layout Components
 
